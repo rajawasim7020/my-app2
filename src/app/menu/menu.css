@@ -1,0 +1,266 @@
+/* ==========================
+   MENU PAGE
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-section {
+  width: 90%;
+  max-width: 1300px;
+  margin: 70px auto;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  color: #000;
+}
+
+.menu-subtitle {
+  text-align: center;
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 45px;
+}
+
+/* ==========================
+   CATEGORY BUTTONS
+========================== */
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 70px;
+}
+
+.category-btn {
+  border: none;
+  background: #f3f3f3;
+  padding: 13px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.category-btn:hover {
+  background: #ff6b00;
+  color: white;
+}
+
+.active {
+  background: #ff6b00;
+  color: white;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+  gap: 70px 35px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+/* .menu-card {
+  background: white;
+  border-radius: 25px;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: .35s;
+} */
+
+.menu-card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    min-height:470px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    
+}
+.menu-card:hover {
+  transform: translateY(-12px);
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+/*
+.image-box {
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.food-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: .4s;
+}
+
+*/
+
+.menu-card:hover .food-img {
+  transform: scale(1.08) rotate(5deg);
+}
+
+/* ==========================
+   BODY
+========================== */
+
+.card-body {
+  padding: 0 22px;
+}
+/* 
+.card-body h3 {
+  color: black;
+  font-size: 24px;
+  margin: 12px 0;
+} */
+
+.card-body h3{
+    min-height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+}
+.rating {
+  color: #ffb400;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+/* ==========================
+   PRICE
+========================== */
+
+.price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.price {
+  color: #ff6b00;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.price-cart button {
+  border: none;
+  background: #ff6b00;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.price-cart button:hover {
+  background: black;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.menu-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.menu-title{
+font-size:34px;
+}
+
+.category-btn{
+padding:10px 18px;
+font-size:14px;
+}
+
+.menu-grid{
+grid-template-columns:1fr;
+}
+
+.price-cart{
+flex-direction:column;
+gap:15px;
+}
+/* .image-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.food-img{
+width:160px;
+height:160px;
+object-fit: contain;
+display: block;
+} */
+
+.image-box{
+    width:180px;
+    height:180px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 20px;
+}
+
+.food-img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+}
+}
+
+.description{
+    color:#777;
+    font-size:15px;
+    line-height:1.6;
+    text-align:center;
+    margin:15px 0 25px;
+    padding:0 12px;
+    min-height:55px;
+}
